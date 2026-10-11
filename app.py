@@ -86,8 +86,9 @@ HTML = """
 <body>
 <main class="container">
     <header>
-        <h1>Smart Parking System</h1>
-        <p>Manage parking availability easily</p>
+    <h1>Smart Parking System</h1>
+    <p>Manage parking availability easily</p>
+    <p>Feature branch demonstration</p>
     </header>
 
     <section class="summary">
