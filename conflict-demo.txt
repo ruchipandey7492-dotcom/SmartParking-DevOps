@@ -1,1 +1,1 @@
-Parking status: Available
+Parking status: Occupied
