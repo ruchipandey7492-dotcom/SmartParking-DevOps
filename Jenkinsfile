@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.12-slim'
+            args '-u root'
+        }
+    }
 
     stages {
         stage('Checkout') {
@@ -10,15 +15,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Installing project dependencies'
-                bat 'python -m pip install -r requirements.txt'
+                sh 'python --version'
+                sh 'python -m pip install --upgrade pip'
+                sh 'python -m pip install -r requirements.txt'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running automated tests'
-                bat 'python -m pytest -v'
+                sh 'python -m pytest -v'
             }
         }
     }
