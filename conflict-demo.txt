@@ -1,2 +1,0 @@
-Parking status: Reserved
-Resolved conflict: the main branch version was selected.
